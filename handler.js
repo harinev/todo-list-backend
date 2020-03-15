@@ -4,6 +4,6 @@ const serverlessHttp = require("serverless-http");
 
 const app=express();
 
-app.get("/todo", function(request, response){
+app.get("/tasks", function(request, response){
 
 })
