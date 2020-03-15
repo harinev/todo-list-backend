@@ -50,21 +50,24 @@ functions:
           method: get
           path: tasks
           cors: true
-      # - http:
-      #     method: post
-      #     path: tasks
-      #     cors: true
-      # - http:
-      #     method: put
-      #     path: tasks/{id}
-      #     cors: true
-      # - http:
-      #     method: delete
-      #     path: tasks/{id}
-      #     cors: true
+      - http:
+          method: post
+          path: tasks
+          cors: true
+      - http:
+          method: put
+          path: tasks/{id}
+          cors: true
+      - http:
+          method: delete
+          path: tasks/{id}
+          cors: true
 
 
-
+# GET - https://sub5721szi.execute-api.eu-west-1.amazonaws.com/dev/tasks
+#   POST - https://sub5721szi.execute-api.eu-west-1.amazonaws.com/dev/tasks
+#   PUT - https://sub5721szi.execute-api.eu-west-1.amazonaws.com/dev/tasks/{id}
+#   DELETE - https://sub5721szi.execute-api.eu-west-1.amazonaws.com/dev/tasks/{id}
 
 
 
