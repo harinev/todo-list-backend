@@ -40,28 +40,28 @@ provider:
 # lamba function thats used. using todo as a filename and todoapp is the export of handler func
 functions:
   tasks:
-    handler: tasks.handler
-    environment:
-      DB_HOST: ${opt:DB_HOST}
-      DB_USER: ${opt:DB_USER}
-      DB_PASSWORD: ${opt:DB_PASSWORD}
+    handler: handler.tasks
+    # environment:
+    #   DB_HOST: ${opt:DB_HOST}
+    #   DB_USER: ${opt:DB_USER}
+    #   DB_PASSWORD: ${opt:DB_PASSWORD}
     events:
       - http:
           method: get
           path: tasks
           cors: true
-      - http:
-          method: post
-          path: tasks
-          cors: true
-      - http:
-          method: put
-          path: tasks/{id}
-          cors: true
-      - http:
-          method: delete
-          path: tasks/{id}
-          cors: true
+      # - http:
+      #     method: post
+      #     path: tasks
+      #     cors: true
+      # - http:
+      #     method: put
+      #     path: tasks/{id}
+      #     cors: true
+      # - http:
+      #     method: delete
+      #     path: tasks/{id}
+      #     cors: true
 
 
 
