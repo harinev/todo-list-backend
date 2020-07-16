@@ -39,7 +39,7 @@ app.put("/todos/:id", (request, response) => {
 	const updatedTask = request.body;
 	const id = request.params.id;
 
-	connection.query("UPDATE Task SET Completed = ? taskitem = ? duedt = ?  userid = ? WHERE id = ?", [updatedTask, id],
+	connection.query("UPDATE Task SET ? WHERE id = ?", [updatedTask, id],
 		function (err) {
 			if (err) {
 				response.status(500).json({ error: err });
