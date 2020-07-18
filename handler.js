@@ -52,13 +52,15 @@ app.put("/todos/:id", (request, response) => {
 });
 
 
-app.post("/todos/:id", (request, response) => {
+app.post("/todos", (request, response) => {
 	const addedTask = request.body;
 
-	connection.query("INSERT INTO Task SET ?", [addedTask], function (err) {
+	connection.query("INSERT INTO Task SET ?", [addedTask], function (err, data) {
 		if (err) {
 			response.status(500).json({ error: err });
 		} else {
+			newTask.id = data.insertId;
+			newTask.dateDue= new Date(newTask.duedt).toISOString();
 			response.status(201).json({
 				message: `Successfully added a task {id}`
 			})

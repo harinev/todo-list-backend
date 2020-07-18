@@ -1,6 +1,6 @@
 # todo-list-backend
 
-ToDo Application Backend
+ToDo Application Backend by Harine
 This is linked to the frontend React Application and connects to RDS Database
 
 Front end React App https://github.com/harinev/Todo-list-app.git
