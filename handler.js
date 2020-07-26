@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 	user: process.env.DB_USER,
 	password: process.env.DB_PASSWORD,
 	database: "todos"
-  });
+});
 
 app.get("/todos", function (request, response) {
 	console.log("received request for get/todos");
@@ -60,7 +60,7 @@ app.post("/todos", (request, response) => {
 			response.status(500).json({ error: err });
 		} else {
 			newTask.id = data.insertId;
-			newTask.dateDue= new Date(newTask.duedt).toISOString();
+			newTask.dateDue = new Date(newTask.duedt).toISOString();
 			response.status(201).json({
 				message: `Successfully added a task {id}`
 			})
